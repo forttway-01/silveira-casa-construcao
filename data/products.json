@@ -1,0 +1,28 @@
+[
+  {
+    "id": "SKU001",
+    "name": "Cimento CP II 50kg",
+    "price": 32.9,
+    "category": "Materiais Básicos",
+    "image": "assets/products/cimento.jpg"
+  },
+  {
+    "id": "SKU002",
+    "name": "Tinta Acrílica 18L",
+    "price": 289.9,
+    "category": "Acabamento",
+    "image": "assets/products/tinta-acrilica-18l.jpg"
+  },
+
+  {
+    "id": "SKU0002",
+    "name": "cABO FLEXIVEL 4MM",
+    "price": 59.9,
+    "category": "Material Basico",
+    "image": "assets/products/cabo_4mm_vermelho.jpg"
+  }
+
+  
+
+]
+

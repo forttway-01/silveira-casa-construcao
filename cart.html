@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carrinho | Finalizar no WhatsApp</title>
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+
+<body>
+  <header class="topbar">
+  <a class="brand" href="index.html" aria-label="Página inicial">
+    <img class="brandLogo" src="./assests/logo.png" alt="Silveira Casa e Construção" />
+    <div class="brandText">
+      <span class="brandName">Silveira</span>
+      <span class="brandTag">Casa e Construção</span>
+    </div>
+  </a>
+
+  <a class="cartBtn" href="cart.html" aria-label="Abrir carrinho">
+    <span class="cartIcon">🛒</span>
+    <span class="cartLabel">Carrinho</span>
+    <span class="badge" data-cart-badge>0</span>
+  </a>
+</header>
+
+  <main class="wrap">
+    <div class="pageHead">
+      <h1>Seu carrinho</h1>
+      <p>Revise itens e finalize enviando a lista para o WhatsApp da loja.</p>
+    </div>
+
+    <div class="layout">
+      <!-- Itens -->
+      <section class="card">
+        <div class="cardHead">
+          <h2>Itens</h2>
+          <button class="btn ghost" id="btnClear" type="button">Limpar</button>
+        </div>
+
+        <div class="empty" data-cart-empty style="display:none;">
+          Seu carrinho está vazio. Volte e adicione produtos 🙂
+        </div>
+
+        <div class="cartList" data-cart-list></div>
+      </section>
+
+      <!-- Finalização -->
+      <aside class="card">
+        <h2>Finalizar</h2>
+
+        <div class="summary" data-cart-summary></div>
+
+        <form class="form" data-customer-form onsubmit="return false;">
+          <label>
+            Seu nome (opcional)
+            <input name="name" placeholder="Ex.: João" />
+          </label>
+
+          <label>
+            Entrega / Retirada (opcional)
+            <input name="address" placeholder="Ex.: Vou retirar / Rua X, nº Y" />
+          </label>
+
+          <label>
+            Observações (opcional)
+            <textarea name="note" placeholder="Ex.: Preciso para hoje / Preferência de marca"></textarea>
+          </label>
+
+          <button class="btn primary big" id="btnWhats" type="button">
+            Enviar pedido no WhatsApp
+          </button>
+
+          <p class="hint">
+            O pedido é enviado como mensagem com lista + total. A loja confirma estoque e entrega.
+          </p>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/cart.js"></script>
+  <script>
+    // Renderiza e liga controles do carrinho
+    CartWhats.renderCart();
+    CartWhats.bindCartControls();
+
+    // Botões
+    document.getElementById("btnClear").addEventListener("click", () => {
+      CartWhats.clearCart();
+      CartWhats.renderCart();
+    });
+
+    document.getElementById("btnWhats").addEventListener("click", () => {
+      // ALTERE AQUI para o WhatsApp do cliente (formato E.164)
+      // Ex.: 55 + DDD + número (sem espaços)
+      CartWhats.checkoutWhatsApp({ phoneE164: "55SEUNUMEROAQUI" });
+    });
+  </script>
+</body>
+</html>

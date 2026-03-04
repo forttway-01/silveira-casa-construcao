@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja | Pedido pelo WhatsApp</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOPBAR
+       ========================= -->
+ <header class="topbar">
+  <a class="brand" href="index.html" aria-label="Página inicial">
+    <!-- Troque o caminho pelo local real da sua logo -->
+    <img class="brandLogo" src="./assets/logo.png" alt="Silveira Casa e Construção" />
+    <div class="brandText">
+      <span class="brandName">Silveira</span>
+      <span class="brandTag">Casa e Construção • Peça pelo WhatsApp</span>
+    </div>
+  </a>
+
+  <div class="topActions">
+    <div class="searchBox">
+      <input id="searchInput" type="search" placeholder="Buscar produto (ex.: cimento, tinta...)" />
+    </div>
+
+    <a class="cartBtn" href="cart.html" aria-label="Abrir carrinho">
+      <span class="cartIcon">🛒</span>
+      <span class="cartLabel">Carrinho</span>
+      <span class="badge" data-cart-badge>0</span>
+    </a>
+  </div>
+</header>
+
+  <!-- =========================
+       HERO
+       ========================= -->
+  <section class="hero">
+    <div class="heroInner">
+      <h1>Monte seu pedido e finalize no WhatsApp</h1>
+      <p>
+        Veja preços, adicione ao carrinho e envie a lista pronta para a loja.
+        Rápido, simples e sem enrolação.
+      </p>
+
+      <div class="heroCtas">
+        <a class="btn primary" href="#produtos">Ver produtos</a>
+        <a class="btn ghost" href="cart.html">Abrir carrinho</a>
+      </div>
+
+      <div class="heroHints">
+        <div class="hintCard">
+          <b>✅ Preço visível</b>
+          <span>Sem surpresa</span>
+        </div>
+        <div class="hintCard">
+          <b>🛒 Carrinho simples</b>
+          <span>Quantidades e total</span>
+        </div>
+        <div class="hintCard">
+          <b>📲 Finaliza no Whats</b>
+          <span>Lista pronta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       CONTENT
+       ========================= -->
+  <main class="wrap" id="produtos">
+    <div class="sectionHead">
+      <h2>Produtos em destaque</h2>
+      <div class="chips" id="categoryChips"></div>
+    </div>
+
+    <div class="grid" id="productGrid"></div>
+  </main>
+
+  <!-- =========================
+       FLOATING WHATS (opcional)
+       ========================= -->
+  <a class="whatsFloat" id="whatsFloat" target="_blank" rel="noopener noreferrer">
+    <span class="whatsIcon">📲</span>
+    <span class="whatsText">Falar no Whats</span>
+  </a>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

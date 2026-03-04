@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin | Catálogo de Produtos</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Voltar ao site">
+      <span class="brandMark">🧱</span>
+      <span class="brandName">Admin do Catálogo</span>
+      <span class="brandTag">Gerar products.json</span>
+    </a>
+
+    <div class="topActions">
+      <button class="btn ghost" id="btnImport">Importar JSON</button>
+      <button class="btn primary" id="btnExport">Exportar JSON</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <!-- Form -->
+      <div class="card">
+        <div class="cardHead">
+          <h2 id="formTitle">Novo produto</h2>
+          <span class="pill" id="countPill">0 itens</span>
+        </div>
+
+        <form id="productForm" class="form" autocomplete="off">
+          <input type="hidden" id="editIndex" value="" />
+
+          <div class="row">
+            <label>
+              SKU / ID (único)
+              <input id="id" placeholder="Ex.: SKU001" required />
+            </label>
+
+            <label>
+              Preço (R$)
+              <input id="price" type="number" step="0.01" min="0" placeholder="Ex.: 32.90" required />
+            </label>
+          </div>
+
+          <label>
+            Nome do produto
+            <input id="name" placeholder="Ex.: Cimento CP II 50kg" required />
+          </label>
+
+          <div class="row">
+            <label>
+              Categoria
+              <input id="category" placeholder="Ex.: Materiais Básicos" required />
+            </label>
+
+            <label>
+              Foto (arquivo em /assets/products/)
+              <input id="image" placeholder="Ex.: cimento-cp2-50kg.jpg" />
+              <small class="help">
+                Vai virar: <b>assets/products/SEU-ARQUIVO.jpg</b>
+              </small>
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Link da foto (opcional, pra preview)
+              <input id="imageUrl" placeholder="Ex.: https://..." />
+              <small class="help">Se você não tiver hospedado, pode deixar vazio.</small>
+            </label>
+
+            <div class="previewBox">
+              <div class="previewTitle">Preview</div>
+              <img id="previewImg" alt="Prévia da foto" />
+              <div class="previewHint" id="previewHint">Sem imagem</div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" type="submit" id="btnSave">Salvar</button>
+            <button class="btn ghost" type="button" id="btnReset">Limpar</button>
+            <button class="btn danger" type="button" id="btnDelete" disabled>Excluir</button>
+          </div>
+
+          <div class="note">
+            <b>Dica:</b> depois de cadastrar tudo, clique em <b>Exportar JSON</b> e substitua o arquivo
+            <code>public/data/products.json</code> do seu site.
+          </div>
+        </form>
+      </div>
+
+      <!-- List -->
+      <div class="card">
+        <div class="cardHead">
+          <h2>Produtos</h2>
+          <div class="filters">
+            <input id="search" class="input" placeholder="Buscar por nome ou SKU..." />
+            <select id="catFilter" class="input">
+              <option value="__ALL__">Todas categorias</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="list" class="list"></div>
+
+        <div class="footerActions">
+          <button class="btn ghost" id="btnSeed">Adicionar exemplos</button>
+          <button class="btn ghost" id="btnClearAll">Limpar tudo</button>
+        </div>
+
+        <p class="hint">
+          Clique em um item para editar. O catálogo é salvo no seu navegador (localStorage).
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- input de arquivo escondido para importar JSON -->
+  <input type="file" id="fileInput" accept="application/json" style="display:none;" />
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
