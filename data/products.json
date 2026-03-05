@@ -3,26 +3,38 @@
     "id": "SKU001",
     "name": "Cimento CP II 50kg",
     "price": 32.9,
+    "oldPrice": 36.9,
     "category": "Materiais Básicos",
-    "image": "assets/products/cimento.jpg"
+    "image": "assets/products/cimento-cp2-50kg.jpg",
+    "isOffer": true
   },
   {
     "id": "SKU002",
     "name": "Tinta Acrílica 18L",
     "price": 289.9,
-    "category": "Acabamento",
-    "image": "assets/products/tinta-acrilica-18l.jpg"
+    "oldPrice": 329.9,
+    "category": "Pintura",
+    "image": "assets/products/tinta-acrilica-18l.jpg",
+    "isOffer": true
+  },
+  {
+    "id": "SKU003",
+    "name": "Fita Isolante 20m",
+    "price": 7.9,
+    "category": "Elétrica",
+    "image": "assets/products/fita-isolante-20m.jpg",
+    "isOffer": false
   },
 
+  
   {
-    "id": "SKU0002",
-    "name": "cABO FLEXIVEL 4MM",
-    "price": 59.9,
-    "category": "Material Basico",
-    "image": "assets/products/cabo_4mm_vermelho.jpg"
+    "id": "0003",
+    "name": "parafuso filips",
+    "price": 9.9,
+    "category": "parafusos",
+    "image": "assets/products/parafuso.jpg",
+    "isOffer": true,
+    "oldPrice": 11.38
   }
 
-  
-
 ]
-

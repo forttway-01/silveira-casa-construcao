@@ -1,0 +1,23 @@
+[
+  {
+    "image": "assets/banners/banner1.jpg",
+    "title": "Ofertas da Semana",
+    "text": "Descontos especiais em materiais",
+    "button": "Ver ofertas",
+    "link": "#produtos"
+  },
+  {
+    "image": "assets/banners/banner2.jpg",
+    "title": "Ferramentas Profissionais",
+    "text": "Qualidade e durabilidade",
+    "button": "Comprar agora",
+    "link": "#produtos"
+  },
+  {
+    "image": "assets/banners/banner3.jpg",
+    "title": "Tudo para sua obra",
+    "text": "Os melhores materiais",
+    "button": "Ver catálogo",
+    "link": "#produtos"
+  }
+]
