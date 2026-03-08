@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Entrar na conta</title>
+
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="loginBody">
+
+<div class="loginWrapper">
+
+<div class="loginCard">
+
+<img src="assets/logo.png" class="loginLogo">
+
+<h2>Bem-vindo</h2>
+
+<p class="loginSub">
+Entre na sua conta para continuar
+</p>
+
+<div class="inputGroup">
+
+<input id="email" placeholder="Seu email">
+
+</div>
+
+<div class="inputGroup passwordGroup">
+
+<input id="password" type="password" placeholder="Sua senha">
+
+<button id="togglePassword" class="togglePass">
+👁
+</button>
+
+</div>
+
+<button id="loginBtn" class="loginBtn">
+Entrar
+</button>
+
+<button id="googleLogin" class="googleBtn">
+
+<svg class="icon">
+<use href="assets/icons.svg#i-google"></use>
+</svg>
+
+Entrar com Google
+
+</button>
+
+<button id="registerBtn" class="registerBtn">
+Criar conta
+</button>
+
+<a id="resetPassword" class="resetPass">
+Esqueci minha senha
+</a>
+
+<a href="index.html" class="backHome">
+← Voltar para loja
+</a>
+
+</div>
+
+</div>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>

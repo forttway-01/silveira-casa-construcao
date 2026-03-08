@@ -23,12 +23,14 @@
 <img class="brandLogo" src="assets/logo.png">
 
 <div class="brandText">
+
 <span class="brandName">Silveira</span>
+
 <span class="brandTag">Casa e Construção</span>
+
 </div>
 
 </a>
-
 
 <div class="searchBox">
 
@@ -44,19 +46,41 @@
 
 </div>
 
-
 <div class="headerActions">
 
-<a class="whatsBtn">
+<div class="userMenu">
 
-<svg class="icon">
-<use href="assets/icons.svg#i-whatsapp"></use>
-</svg>
+<div class="userTrigger">
 
-WhatsApp
+<img id="userAvatar" class="userAvatar" src="assets/avatar.png">
 
-</a>
+<div class="userInfo">
 
+<span class="userHello">
+Olá, <span id="userName">visitante</span>
+</span>
+
+<span class="userAccount">
+Minha conta
+</span>
+
+</div>
+
+</div>
+
+<div class="userDropdown">
+
+<a href="account.html">Minha conta</a>
+
+<a href="#">Pedidos</a>
+
+<a href="#">Favoritos</a>
+
+<button id="logoutBtn">Sair</button>
+
+</div>
+
+</div>
 
 <a class="cartBtn" href="cart.html">
 
@@ -66,7 +90,7 @@ WhatsApp
 
 Carrinho
 
-<span class="badge">0</span>
+<span class="badge" data-cart-badge>0</span>
 
 </a>
 
@@ -256,5 +280,6 @@ Carrinho
   })();
 </script>
 <script src="js/slider.js"></script>
+<script type="module" src="js/auth.js"></script>
 </body>
 </html>

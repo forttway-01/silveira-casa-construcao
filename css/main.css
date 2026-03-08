@@ -215,7 +215,7 @@ HERO BANNER FULL WIDTH
 
 width:100%;
 position:relative;
-margin-top:15px;
+margin-top:20px;
 
 }
 
@@ -802,152 +802,232 @@ background:#00adee;
 HEADER PROFISSIONAL
 ========================= */
 
+/* =========================
+HEADER
+========================= */
+
 .topbar{
+
 background:#ffffff;
+
 border-bottom:1px solid #e6e6e6;
+
 }
+
+/* container */
 
 .headerContainer{
 
-max-width:1200px;
-margin:auto;
-padding:16px;
+width:100%;
+
+padding:16px 80px;
 
 display:flex;
 align-items:center;
 
 }
 
-/* LOGO */
+/* logo */
 
 .brand{
+
 display:flex;
+
 align-items:center;
+
 gap:10px;
+
+text-decoration:none;
+
+color:#231f20;
+
 }
 
-/* BUSCA ocupa espaço central */
+.brandLogo{
+
+height:80px;
+
+}
+
+.brandText{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.brandName{
+
+font-family:'Montserrat';
+
+font-weight:800;
+
+font-size:20px;
+
+}
+
+.brandTag{
+
+font-size:12px;
+
+color:#666;
+
+}
+
+/* busca */
 
 .searchBox{
 
 flex:1;
+
 margin:0 30px;
 
 display:flex;
-border:2px solid #00adee;
+
+border:2px solid #4355a4;
+
 border-radius:10px;
+
 overflow:hidden;
 
 }
 
-/* BOTÕES SEMPRE NA DIREITA */
+.searchBox input{
+
+flex:1;
+
+padding:12px;
+
+border:none;
+
+outline:none;
+
+font-size:14px;
+
+}
+
+.searchBtn{
+
+background:#4355a4;
+
+border:none;
+
+color:white;
+
+padding:0 16px;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+}
+
+/* área direita */
 
 .headerActions{
 
 display:flex;
+
 align-items:center;
-gap:14px;
+
+gap:18px;
 
 margin-left:auto;
 
 }
 
-/* LOGO */
+/* saudação */
 
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-text-decoration:none;
-color:#231f20;
-}
+.userGreeting{
 
-.brandLogo{
-height:100px;
-}
-
-.brandText{
-display:flex;
-flex-direction:column;
-}
-
-.brandName{
-font-family:'Montserrat';
-font-weight:800;
-font-size:20px;
-}
-
-.brandTag{
-font-size:13px;
-color:#666;
-}
-
-
-/* BUSCA */
-
-.searchBox{
-flex:1;
-display:flex;
-border:2px solid #00adee;
-border-radius:10px;
-overflow:hidden;
-background:#fff;
-}
-
-.searchBox input{
-flex:1;
-padding:12px;
-border:none;
-outline:none;
-font-size:14px;
-}
-
-.searchBtn{
-background:#00adee;
-color:#fff;
-border:none;
-padding:0 16px;
-cursor:pointer;
-font-size:16px;
-}
-
-
-/* AÇÕES */
-
-.headerActions{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.whatsBtn{
-background:#25d366;
-color:#fff;
-padding:10px 16px;
-border-radius:8px;
-text-decoration:none;
 font-weight:600;
+
+color:#231f20;
+
+
 }
+
+/* login */
+
+.loginLink{
+
+text-decoration:none;
+
+color:#4355a4;
+
+font-weight:600;
+
+
+}
+
+/* logout */
+
+.logoutBtn{
+
+background:#4355a4;
+
+color:white;
+
+border:none;
+
+padding:6px 12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+
+}
+
+/* carrinho */
 
 .cartBtn{
+
 background:#4355a4;
-color:#fff;
+
+color:white;
+
 padding:10px 16px;
+
 border-radius:8px;
+
 text-decoration:none;
+
 font-weight:600;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
 position:relative;
+
 }
 
+/* badge */
+
 .badge{
+
 position:absolute;
+
 top:-6px;
+
 right:-6px;
+
 background:#ff3b3b;
-color:#fff;
+
+color:white;
+
 font-size:11px;
+
 padding:4px 6px;
+
 border-radius:50%;
+
 }
 
 
@@ -1563,5 +1643,876 @@ cursor:pointer;
 .sliderDots span.active{
 
 background:#00adee;
+
+}
+
+.userArea{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.userGreeting{
+
+font-weight:600;
+
+}
+
+.loginLink{
+
+text-decoration:none;
+color:#4355a4;
+font-weight:600;
+
+}
+
+.logoutBtn{
+
+border:none;
+background:#4355a4;
+color:white;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+/* =========================
+LOGIN PAGE
+========================= */
+
+.loginBody{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+
+linear-gradient(
+135deg,
+#4355a4,
+#00adee
+);
+
+font-family:'Inter',sans-serif;
+
+}
+
+/* container */
+
+.loginContainer{
+
+width:100%;
+max-width:420px;
+
+padding:20px;
+
+}
+
+/* card */
+
+.loginCard{
+
+background:white;
+
+padding:40px;
+
+border-radius:14px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,0.15);
+
+display:flex;
+flex-direction:column;
+gap:14px;
+
+}
+
+/* título */
+
+.loginCard h2{
+
+margin:0;
+font-family:'Montserrat';
+font-size:26px;
+
+}
+
+/* subtítulo */
+
+.loginSub{
+
+color:#666;
+font-size:14px;
+
+margin-bottom:10px;
+
+}
+
+/* inputs */
+
+.loginCard input{
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ddd;
+
+font-size:14px;
+
+outline:none;
+
+transition:.2s;
+
+}
+
+.loginCard input:focus{
+
+border-color:#00adee;
+
+box-shadow:0 0 0 3px rgba(0,173,238,0.15);
+
+}
+
+/* botão login */
+
+.loginBtn{
+
+background:#4355a4;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+/* botão cadastro */
+
+.registerBtn{
+
+background:#00adee;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+/* voltar */
+
+.backHome{
+
+text-align:center;
+
+margin-top:10px;
+
+text-decoration:none;
+
+color:#4355a4;
+
+font-weight:600;
+
+}
+
+/* =========================
+ULTRA LOGIN
+========================= */
+
+.loginBody{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+
+linear-gradient(
+135deg,
+#4355a4,
+#00adee
+);
+
+font-family:'Inter',sans-serif;
+
+}
+
+/* wrapper */
+
+.loginWrapper{
+
+width:100%;
+max-width:420px;
+padding:20px;
+
+}
+
+/* card */
+
+.loginCard{
+
+background:white;
+
+padding:45px 40px;
+
+border-radius:16px;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,0.25);
+
+display:flex;
+flex-direction:column;
+gap:14px;
+
+animation:fadeUp .6s ease;
+
+}
+
+/* animação */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* logo */
+
+.loginLogo{
+
+width:90px;
+margin:auto;
+
+}
+
+/* título */
+
+.loginCard h2{
+
+margin:10px 0 0;
+
+text-align:center;
+
+font-family:'Montserrat';
+font-size:26px;
+
+}
+
+/* subtitulo */
+
+.loginSub{
+
+text-align:center;
+color:#666;
+font-size:14px;
+
+margin-bottom:10px;
+
+}
+
+/* inputs */
+
+.inputGroup{
+
+position:relative;
+
+}
+
+.loginCard input{
+
+width:100%;
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ddd;
+
+font-size:14px;
+
+outline:none;
+
+transition:.2s;
+
+}
+
+.loginCard input:focus{
+
+border-color:#00adee;
+
+box-shadow:0 0 0 3px rgba(0,173,238,0.2);
+
+}
+
+/* mostrar senha */
+
+.passwordGroup{
+
+display:flex;
+
+}
+
+.togglePass{
+
+position:absolute;
+
+right:8px;
+top:50%;
+
+transform:translateY(-50%);
+
+background:none;
+border:none;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+/* botões */
+
+.loginBtn{
+
+background:#4355a4;
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.googleBtn{
+
+background:white;
+
+border:1px solid #ddd;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:14px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:8px;
+
+cursor:pointer;
+
+}
+
+.registerBtn{
+
+background:#00adee;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+/* links */
+
+.resetPass{
+
+text-align:center;
+font-size:13px;
+color:#4355a4;
+cursor:pointer;
+
+}
+
+.backHome{
+
+text-align:center;
+text-decoration:none;
+
+margin-top:10px;
+
+color:#4355a4;
+font-weight:600;
+
+}
+
+/* =========================
+USER MENU PREMIUM
+========================= */
+
+.userMenu{
+
+position:relative;
+cursor:pointer;
+
+}
+
+/* trigger */
+
+.userTrigger{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+padding:6px 10px;
+
+border-radius:8px;
+
+transition:.2s;
+
+}
+
+.userTrigger:hover{
+
+background:#f4f4f4;
+
+}
+
+/* avatar */
+
+.userAvatar{
+
+width:34px;
+height:34px;
+
+border-radius:50%;
+
+background:#4355a4;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:16px;
+
+}
+
+/* textos */
+
+.userInfo{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.userHello{
+
+font-size:13px;
+color:#666;
+
+}
+
+.userAccount{
+
+font-weight:600;
+font-size:14px;
+
+}
+
+/* dropdown */
+
+.userDropdown{
+
+position:absolute;
+
+top:45px;
+right:0;
+
+width:180px;
+
+background:white;
+
+border-radius:10px;
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,0.15);
+
+display:none;
+
+flex-direction:column;
+
+padding:10px 0;
+
+z-index:999;
+
+}
+
+/* itens */
+
+.userDropdown a,
+.userDropdown button{
+
+padding:10px 16px;
+
+text-decoration:none;
+
+border:none;
+background:none;
+
+text-align:left;
+
+font-size:14px;
+
+cursor:pointer;
+
+color:#231f20;
+
+}
+
+.userDropdown a:hover,
+.userDropdown button:hover{
+
+background:#f5f5f5;
+
+}
+
+/* abrir dropdown */
+
+.userMenu:hover .userDropdown{
+
+display:flex;
+
+}
+
+/* =========================
+USER MENU PREMIUM
+========================= */
+
+.userMenu{
+
+position:relative;
+
+}
+
+.userTrigger{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+cursor:pointer;
+
+padding:6px 10px;
+
+border-radius:8px;
+
+transition:.2s;
+
+}
+
+.userTrigger:hover{
+
+background:#f5f5f5;
+
+}
+
+/* avatar */
+
+.userAvatar{
+
+width:36px;
+height:36px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:2px solid #4355a4;
+
+}
+
+/* info */
+
+.userInfo{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.userHello{
+
+font-size:13px;
+color:#666;
+
+}
+
+.userAccount{
+
+font-weight:600;
+
+}
+
+/* dropdown */
+
+.userDropdown{
+
+position:absolute;
+
+top:45px;
+right:0;
+
+background:white;
+
+border-radius:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+display:none;
+
+flex-direction:column;
+
+min-width:200px;
+
+padding:10px 0;
+
+z-index:1000;
+
+}
+
+.userDropdown a,
+.userDropdown button{
+
+padding:10px 16px;
+
+text-decoration:none;
+
+border:none;
+
+background:none;
+
+text-align:left;
+
+cursor:pointer;
+
+color:#231f20;
+
+}
+
+.userDropdown a:hover,
+.userDropdown button:hover{
+
+background:#f5f5f5;
+
+}
+
+.userMenu:hover .userDropdown{
+
+display:flex;
+
+}
+
+/* =========================
+USER MENU
+========================= */
+
+.userMenu{
+
+position:relative;
+
+}
+
+.userTrigger{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+cursor:pointer;
+
+padding:6px 10px;
+
+border-radius:8px;
+
+}
+
+.userTrigger:hover{
+
+background:#f5f5f5;
+
+}
+
+.userAvatar{
+
+width:36px;
+height:36px;
+
+border-radius:50%;
+
+border:2px solid #4355a4;
+
+object-fit:cover;
+
+}
+
+.userInfo{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.userHello{
+
+font-size:13px;
+color:#666;
+
+}
+
+.userAccount{
+
+font-weight:600;
+
+}
+
+.userDropdown{
+
+position:absolute;
+
+top:45px;
+right:0;
+
+background:white;
+
+border-radius:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+display:none;
+
+flex-direction:column;
+
+min-width:200px;
+
+padding:10px 0;
+
+}
+
+.userDropdown a,
+.userDropdown button{
+
+padding:10px 16px;
+
+text-decoration:none;
+
+border:none;
+
+background:none;
+
+text-align:left;
+
+cursor:pointer;
+
+color:#231f20;
+
+}
+
+.userDropdown a:hover,
+.userDropdown button:hover{
+
+background:#f5f5f5;
+
+}
+
+.userMenu:hover .userDropdown{
+
+display:flex;
+
+}
+
+/* =========================
+ACCOUNT PAGE
+========================= */
+
+.accountPage{
+
+max-width:1100px;
+
+margin:40px auto;
+
+padding:20px;
+
+}
+
+.accountGrid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.accountCard{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 }
